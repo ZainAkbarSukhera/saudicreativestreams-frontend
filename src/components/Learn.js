@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import LearnCard from './ArtLearnCard/LearnCardLanding'; 
 import drawingIcon from '../assets/drawing_icon.png';
 import calligraphyIcon from '../assets/calligraphy_icon.png';
@@ -8,6 +9,7 @@ import printMakingIcon from '../assets/printMaking_icon.png';
 import sculptureIcon from '../assets/sculpture_icon.png';
 
 const Workshop = () => {
+  const navigate=useNavigate();
   const workshops = [
     {
       title: "Digital Illustration",
@@ -99,7 +101,8 @@ const Workshop = () => {
       </div>
 
       <div className="text-center mt-6">
-        <button className="px-32 py-2 text-white bg-palatinate-purple rounded hover:bg-fuchsia-800 font-montserrat-light">
+        <button className="px-32 py-2 text-white bg-palatinate-purple rounded hover:bg-fuchsia-800 font-montserrat-light"
+        onClick={()=>navigate('art-learn')}>
           Discover More
         </button>
       </div>

@@ -136,12 +136,12 @@ const ArtBid = () => {
   // </div>
   
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" class="ng-View" autoscroll="true">
       {/* Navbar at the top */}
       <Navbar />
   
       {/* Main content area with FilterMenu and Cards */}
-      <div className="flex flex-grow">
+      <div className="flex flex-grow"  >
         {/* Sidebar filter menu on the left */}
         <aside className="w-1/5 p-4">
           <FilterMenu />

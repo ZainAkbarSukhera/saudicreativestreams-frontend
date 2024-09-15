@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/SCS Logo.png';
 // import { FaTimes, FaBars } from 'react-icons/fa';
 
@@ -23,10 +23,10 @@ const Navbar = () => {
 
   const navItems = [
     { link: 'About', path: 'about' },
-    { link: 'Art-Connect', path: 'connect' },
-    { link: 'Art-Bid', path: 'bid' },
+    { link: 'Art-Connect', path: '/art-connect' },
+    { link: 'Art-Bid', path: '/art-bid' },
     { link: 'Art-Market', path: 'market' },
-    { link: 'Art-Learn', path: 'learn' }
+    { link: 'Art-Learn', path: '/art-learn' }
   ];
 
   return (

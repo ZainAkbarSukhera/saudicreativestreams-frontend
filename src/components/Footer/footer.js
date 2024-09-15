@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
-import tashkeil_Logo from '../assets/tashkeilLogo.png';
+import tashkeil_Logo from '../../assets/tashkeilLogo.png';
 
 // const Footer = () => {
 //   return (
