@@ -7,7 +7,7 @@ import BiddersProfile from './pages/BiddersProfile';
 import ArtLearn from './pages/Art-Learn';
 import ArtConnect from './pages/Art-Connect';
 import CreativeProfile from './pages/CreativeProfile';
-
+//nothing 
 export default function App() {
   return (
     <>
