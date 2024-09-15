@@ -15,8 +15,8 @@ export default function App() {
       {/* <ArtConnect /> */}
       {/* <BiddersProfile /> */}
       {/* <ArtLearn /> */}
-      <ArtConnect />
-      {/* <CreativeProfile /> */}
+      {/* <ArtConnect /> */}
+      <CreativeProfile />
 
 
  
