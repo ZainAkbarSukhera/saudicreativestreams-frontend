@@ -7,11 +7,6 @@ const Navbar = () => {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
-  // Toggle the mobile menu
-  // const toggleMenu = () => {
-  //   setIsMenuOpen(!isMenuOpen);
-  // };
-
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 100);
@@ -25,7 +20,7 @@ const Navbar = () => {
     { link: 'About', path: 'about' },
     { link: 'Art-Connect', path: '/art-connect' },
     { link: 'Art-Bid', path: '/art-bid' },
-    { link: 'Art-Market', path: 'market' },
+    { link: 'Art-Market', path: '/art-market' },
     { link: 'Art-Learn', path: '/art-learn' }
   ];
 

@@ -13,15 +13,10 @@ import im2 from '../assets/Frog.png';
 import im3 from '../assets/Landscapes-13.png';
 import im4 from '../assets/Landscapes-11.png';
 
-import image1 from '../assets/Aramco.png';
-import image2 from '../assets/Neom.jpg';
-import image3 from '../assets/Riyadh Expo 2030.png';
-import image4 from '../assets/STC.jpg';
 import BidFooter from '../components/BidPageFooter/BidFooter';
 
 
-const sortOptions = ['recommended','newest','oldest'];
-
+const sortOptions = ['recommended', 'newest', 'oldest'];
 
 const ArtMarket = () => {
 
@@ -55,54 +50,14 @@ const ArtMarket = () => {
       initialViews: 25000,
     },
   ];
-  
 
-  // return (
-  //   <div>
-  //     <Navbar />
-  //     {/* <FilterMenu />
-  //     <SearchBar />
-  //     <CardViewToggle />
-  //     <SortDropdown options={sortOptions} />
-  //     <FilteredCards projects={projects} /> */}
-  //     {/* <div className="flex top-0 right-0  mt-64 ">
-  //     <BidCardMain project={test} />
-  //     </div> */}
-  //     <div className='container'>
-  //     <div className=" grid grid-cols-4 absolute space-x-2 top-0 right-0 mt-60 mr-8 ">
-  //       {projects.map((project, index) => (
-  //         <BidCardMain key={index} project={project} />
-  //       ))}
-  //     </div>
-  //     </div>
-      
-  //     <BidFooter />
-  //   </div>
-    
-  //   <div className="h-screen flex flex-col">  {/*  Wrap everything in a flex container with column layout for vertical stacking  */}
-  //   <Navbar />
-  //   <div className="flex flex-col overflow-y-auto"> {/* Another flex container for FilterMenu, SearchBar, SortDropdown and FilteredCards */}
-  //     <FilterMenu />
-  //     <div className="flex items-center mb-4"> {/* Add margin-bottom for spacing  */}
-  //       <SearchBar />
-  //       <SortDropdown options={sortOptions} className="ml-4" /> {/* Add margin-left for spacing */}
-  //     </div>
-  //     <FilteredCards />
-  //   </div>
-  //   <div className="flex flex-wrap justify-between p-8"> {/* Flex container for BidCardMain with wrap and justify-between for grid layout */}
-  //     {projects.map((project, index) => (
-  //       <BidCardMain key={index} project={project} className="w-1/4" /> 
-  //     ))}
-  //   </div>
-  // </div>
-  
   return (
-    <div className="min-h-screen flex flex-col" class="ng-View" autoscroll="true">
+    <div className="min-h-screen flex flex-col">
       {/* Navbar at the top */}
       <Navbar />
   
       {/* Main content area with FilterMenu and Cards */}
-      <div className="flex flex-grow"  >
+      <div className="flex flex-grow">
         {/* Sidebar filter menu on the left */}
         <aside className="w-1/5 p-4">
           <MarketFilterMenu />
@@ -120,26 +75,25 @@ const ArtMarket = () => {
           </div>
   
           {/* Filtered Cards */}
-          <div className="mb-52"> {/* Added bottom margin to ensure spacing */}
+          <div className="mb-52">
             <FilteredCards />
           </div>
   
-          {/* Cards Section (BidCardMain components start here, below FilteredCards) */}
-          <div className="grid grid-cols-4 gap-2 mt-8"> {/* Added margin-top for extra spacing */}
-            {/* {projects.map((project, index) => (
-              <BidCardMain key={index} project={project} />
-            ))} */}
+          {/* Cards Section (Artworks rendering here) */}
+          <div className="grid grid-cols-4 gap-2 mt-8">
+            {artworks.map((artwork, index) => (
+              <BidCardMain key={index} project={artwork} />
+            ))}
           </div>
-          <div>
-            {/* Footer always at the bottom */}
-            {/* <footer className="bg-gray-200 mt-auto">
-              <BidFooter />
-            </footer> */}
-          </div>
+
+          {/* Footer */}
+          <footer className="bg-gray-200 mt-auto">
+            <BidFooter />
+          </footer>
         </main>
       </div>
     </div>
   );
-};  
+};
 
 export default ArtMarket;
