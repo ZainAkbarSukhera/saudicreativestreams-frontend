@@ -48,6 +48,15 @@ const ArtConnect = () => {
       initialViews: 750000,
     },
     {
+      profileImage: lPortrait,
+      topImages: [f1, f2, f3],
+      name: 'Abdullah Qandeel',
+      location: 'Jeddah, Saudi Arabia',
+      profession: 'CONTEMPORARY ARTIST',
+      initialLikes: 500000,
+      initialViews: 750000,
+    },
+    {
       profileImage: oPortrait,
       topImages: [o1, o2, o3],
       name: 'Sofana Dahlan',
