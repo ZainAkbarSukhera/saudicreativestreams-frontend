@@ -1,8 +1,14 @@
 import React from 'react';
-
-const BidCard = ({ project }) => {
+import { useNavigate } from 'react-router-dom';
+const BidCard = ({project}) => {
+  const navigate=useNavigate();
+  const handleOnClick = () => {
+    navigate('/bidders-profile'); // Use navigate to go to the profile page
+  }
   return (
-    <div className="flex w-auto flex-col justify-between border-2 border-gray-700 rounded-lg p-4 bg-white min-h-[300px]">
+    <div className="flex w-auto flex-col justify-between border-2 border-gray-700 rounded-lg p-4 bg-white min-h-[300px]"
+    onClick={handleOnClick}
+   >
       <div>
         <img src={project.image} alt={project.title} className="w-full h-64 object-cover mb-2 rounded" />
         <h3 className="text-xl font-montserrat-regular mb-4 text-yankees-blue">{project.title}</h3>
