@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ConnectCard from './ArtConnectCard/ConnectCardLanding';  
 
 import fPortrait from '../assets/fatimaPortrait.png';
@@ -22,6 +23,7 @@ import l2 from '../assets/laila2.png';
 import l3 from '../assets/laila3.png';
 
 const Connect = () => {
+  const navigate=useNavigate();
   const creatives = [
     {
       profileImage: fPortrait,
@@ -86,7 +88,8 @@ const Connect = () => {
       </div>
 
       <div className="text-center mt-6">
-        <button className="px-32 py-2 text-white bg-palatinate-purple rounded hover:bg-fuchsia-800 font-montserrat-light">
+        <button className="px-32 py-2 text-white bg-palatinate-purple rounded hover:bg-fuchsia-800 font-montserrat-light"
+        onClick={()=>navigate('art-connect')}>
           Discover More
         </button>
       </div>

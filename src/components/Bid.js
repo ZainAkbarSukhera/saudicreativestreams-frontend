@@ -1,6 +1,7 @@
 // Bid.js
 import React from 'react';
 import BidCard from './ArtBidCard/BidCardLanding';  // Import BidCard component
+import { useNavigate } from 'react-router-dom';
 import image1 from '../assets/Aramco.png';
 import image2 from '../assets/Neom.jpg';
 import image3 from '../assets/Riyadh Expo 2030.png';
@@ -47,6 +48,7 @@ const projects = [
 ];
 
 const Bid = () => {
+  const navigate=useNavigate();
   return (
     <div className="p-8">
       <div className="mb-8">
@@ -75,7 +77,8 @@ const Bid = () => {
       </div>
 
       <div className="text-center mt-6">
-        <button className="px-32 py-2 text-white bg-palatinate-purple rounded hover:bg-fuchsia-800 font-montserrat-light">
+        <button className="px-32 py-2 text-white bg-palatinate-purple rounded hover:bg-fuchsia-800 font-montserrat-light"
+        onClick={()=>navigate('art-bid')}>
           Discover More
         </button>
       </div>
