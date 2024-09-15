@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <header className={`w-full fixed top-0 left-0 right-0 z-50 ${isSticky ? 'bg-stone-50 shadow-lg' : 'bg-transparent'} transition-all duration-75`}>
       <nav className='flex justify-between items-center py-4 px-8'>
-        <a href="#" className='flex items-center'>
+        <a href="/" className='flex items-center'>
           <img src={logo} alt="Logo" className='w-20 h-auto' />
         </a>
 
