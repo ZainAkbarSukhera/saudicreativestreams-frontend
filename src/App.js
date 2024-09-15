@@ -13,6 +13,7 @@ import ArtMarket from './pages/Art-Market';
 // Uncomment when landing page is ready
 import Landing from './pages/Landing';
 import ScrollToTop from './components/ScrollToTop';
+import BidderProfile from './components/BidderProfile/profileBidder';
 export default function App() {
   return (
     <Router>
@@ -26,7 +27,7 @@ export default function App() {
         <Route path="/art-connect" element={<ArtConnect />} />
         <Route path="/creative-profile" element={<CreativeProfile />} />
         <Route path="/art-bid" element={<ArtBid/>}/>
-        <Route path="/art-market" element={<ArtMarket/>}/>
+        {/* <Route path="/bidderprofile" element={<BidderProfile/>}/> */}
       </Routes>
     </Router>
   );

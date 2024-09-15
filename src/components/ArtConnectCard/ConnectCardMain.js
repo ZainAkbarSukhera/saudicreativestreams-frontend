@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import { FaThumbsUp, FaEye,FaLocationArrow } from 'react-icons/fa';
+import { FaThumbsUp, FaEye, FaLocationArrow } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const ConnectCard = ({ profileImage, topImages, name, location, profession, initialLikes, initialViews }) => {
   const [likes, setLikes] = useState(initialLikes);
   const [liked, setLiked] = useState(false); 
   const [views] = useState(initialViews);
+  const navigate = useNavigate(); // Correct the useNavigate initialization
+
+  const handleOnClick = () => {
+    navigate('/creative-profile'); // Use navigate to go to the profile page
+  }
 
   const handleLike = () => {
     if (liked) {
@@ -16,9 +22,12 @@ const ConnectCard = ({ profileImage, topImages, name, location, profession, init
   };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-2 flex-1">
+    <div 
+      className="bg-white shadow-md rounded-lg p-2 flex-1 cursor-pointer" 
+      onClick={handleOnClick} // Make the entire card clickable
+    >
       {/* Top Images */}
-      <div className="flex space-x-1 mb-0 ">
+      <div className="flex space-x-1 mb-0">
         {topImages.map((image, index) => (
           <img key={index} src={image} alt={`Top image ${index + 1}`} className="h-16 w-full object-cover rounded" />
         ))}
@@ -32,11 +41,9 @@ const ConnectCard = ({ profileImage, topImages, name, location, profession, init
       {/* Name, Location, and Profession */}
       <h3 className="text-lg font-bold text-center font-montserrat-regular text-yankees-blue">{name}</h3>
       <div className='flex justify-center'>
-      <FaLocationArrow className='text-madder-lake text-sm mt-1 mr-2'/>
-      <p className="text-madder-lake text-center font-montserrat-light">{location}</p>
-
+        <FaLocationArrow className='text-madder-lake text-sm mt-1 mr-2'/>
+        <p className="text-madder-lake text-center font-montserrat-light">{location}</p>
       </div>
-     
       <p className="text-palatinate-purple text-center text-sm mb-2 font-montserrat-light">{profession}</p>
 
       {/* Badges, Likes, and Views */}
@@ -48,7 +55,10 @@ const ConnectCard = ({ profileImage, topImages, name, location, profession, init
         </div>
         <div className="flex items-center space-x-4">
           <button
-            onClick={handleLike}
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent the click from triggering card navigation
+              handleLike();
+            }}
             className={`flex items-center space-x-1 ${liked ? 'text-madder-lake' : ''}`}
           >
             <FaThumbsUp /> <span className='text-xs'>{likes}</span>

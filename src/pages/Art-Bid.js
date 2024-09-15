@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import SearchBar from '../components/SearchBar/SearchBar';
 import CardViewToggle from '../components/ToggleView/ToggleView';
 import SortDropdown from '../components/SortDropdown/SortDropdown';
@@ -20,6 +20,8 @@ const sortOptions = ['recommended','newest','oldest'];
 
 const ArtBid = () => {
 
+  const navigate=useNavigate();
+ 
   const projects = [
     {
       image: image1,
@@ -93,48 +95,11 @@ const ArtBid = () => {
       prize:'SAR 100,000 cash prize and featured in a digital exhibition hosted by STC',
     },
   ];
-
   
+  const handleCardClick=()=>{
+    navigate('/bidderprofile');
+  }
 
-  // return (
-  //   <div>
-  //     <Navbar />
-  //     {/* <FilterMenu />
-  //     <SearchBar />
-  //     <CardViewToggle />
-  //     <SortDropdown options={sortOptions} />
-  //     <FilteredCards projects={projects} /> */}
-  //     {/* <div className="flex top-0 right-0  mt-64 ">
-  //     <BidCardMain project={test} />
-  //     </div> */}
-  //     <div className='container'>
-  //     <div className=" grid grid-cols-4 absolute space-x-2 top-0 right-0 mt-60 mr-8 ">
-  //       {projects.map((project, index) => (
-  //         <BidCardMain key={index} project={project} />
-  //       ))}
-  //     </div>
-  //     </div>
-      
-  //     <BidFooter />
-  //   </div>
-    
-  //   <div className="h-screen flex flex-col">  {/*  Wrap everything in a flex container with column layout for vertical stacking  */}
-  //   <Navbar />
-  //   <div className="flex flex-col overflow-y-auto"> {/* Another flex container for FilterMenu, SearchBar, SortDropdown and FilteredCards */}
-  //     <FilterMenu />
-  //     <div className="flex items-center mb-4"> {/* Add margin-bottom for spacing  */}
-  //       <SearchBar />
-  //       <SortDropdown options={sortOptions} className="ml-4" /> {/* Add margin-left for spacing */}
-  //     </div>
-  //     <FilteredCards />
-  //   </div>
-  //   <div className="flex flex-wrap justify-between p-8"> {/* Flex container for BidCardMain with wrap and justify-between for grid layout */}
-  //     {projects.map((project, index) => (
-  //       <BidCardMain key={index} project={project} className="w-1/4" /> 
-  //     ))}
-  //   </div>
-  // </div>
-  
   return (
     <div className="min-h-screen flex flex-col" class="ng-View" autoscroll="true">
       {/* Navbar at the top */}
@@ -166,7 +131,9 @@ const ArtBid = () => {
           {/* Cards Section (BidCardMain components start here, below FilteredCards) */}
           <div className="grid grid-cols-4 gap-2 mt-8"> {/* Added margin-top for extra spacing */}
             {projects.map((project, index) => (
-              <BidCardMain key={index} project={project} />
+              <BidCardMain key={index} 
+              project={project}
+               />
             ))}
           </div>
           <div>
