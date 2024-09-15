@@ -7,6 +7,7 @@ import FilteredCards from '../components/DisciplineFilter/FilterCard';
 import BidCardMain from '../components/ArtBidCard/BidCardMain';
 import MarketFilterMenu from '../components/SideFilterMenu/MarketFilterMenu';
 import Navbar from '../components/NavigationBar/Navbar';
+import MarketProfile from '../components/MarketProfile/MarketProfile';
 
 import im1 from '../assets/After Marylin.png';
 import im2 from '../assets/Frog.png';
@@ -126,9 +127,9 @@ const ArtMarket = () => {
   
           {/* Cards Section (BidCardMain components start here, below FilteredCards) */}
           <div className="grid grid-cols-4 gap-2 mt-8"> {/* Added margin-top for extra spacing */}
-            {/* {projects.map((project, index) => (
-              <BidCardMain key={index} project={project} />
-            ))} */}
+            {artworks.map((project, index) => (
+              <MarketProfile key={index} project={project} />
+            ))}
           </div>
           <div>
             {/* Footer always at the bottom */}
