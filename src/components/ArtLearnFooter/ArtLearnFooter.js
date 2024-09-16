@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // Importing images correctly
 import sofana from "../../assets/sofana_learn.jpg";
-import abdulaziz from "../../assets/abdulaziz.png";
+import abdulaziz from "../../assets/abdulaziz1.png";
 import abqandeel from "../../assets/abqandeel.jpeg";
 import shady from "../../assets/shady.jpeg";
 
@@ -83,7 +83,7 @@ const CategoryComponent = () => {
         {categories.map((category) => (
           <button
             key={category}
-            className={`py-2 px-4 font-bold border-b-4 ${
+            className={`py-2 px-4 font-montserrat-regular border-b-4 ${
               selectedCategory === category
                 ? "border-blue-900 text-blue-900"
                 : "border-transparent text-gray-500"
@@ -109,8 +109,8 @@ const CategoryComponent = () => {
                   : "opacity-70"
               }`}
             >
-              <h3 className="text-sm font-semibold mb-2 text-center">{card.title}</h3>
-              <p className="text-xs text-gray-600 text-center mb-4">{card.instructor}</p>
+              <h3 className="text-sm font-montserrat-regular mb-2 text-center">{card.title}</h3>
+              <p className="text-xs text-gray-600 font-montserrat-light text-center mb-4">{card.instructor}</p>
 
               <img
                 src={card.imgSrc}
@@ -118,9 +118,9 @@ const CategoryComponent = () => {
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
 
-              <div className="flex flex-row justify-center mt-4 mb-6 text-xs font-montserrat-extralight">
+              <div className="flex flex-row justify-center  mt-4 mb-6 text-xs font-montserrat-extralight">
                 {Object.values(card.details).map((detail, index) => (
-                  <p key={index} className="text-gray-500 px-8">
+                  <p key={index} className="text-gray-500 px-8 font-montserrat-extralight">
                     {detail}
                   </p>
                 ))}

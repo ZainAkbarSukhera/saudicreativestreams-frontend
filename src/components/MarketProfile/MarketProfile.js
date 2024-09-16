@@ -1,15 +1,35 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-import MarketCardLanding from "../ArtMarketCard/marketCard";
+import MarketCardMain from "../ArtMarketCard/MarketCardMain";
+import SnapShot from "../SnapShot";
+import MarketCategory from "../MarketProfile/CategoryMarkets";
 import im1 from '../../assets/After Marylin.png';
 import im2 from '../../assets/Frog.png';
 import im3 from '../../assets/Landscapes-13.png';
 import im4 from '../../assets/Landscapes-11.png';
+import im5 from '../../assets/abq_pm_4.png';
+import im6 from '../../assets/fawaz2.jpg';
+import im7 from '../../assets/abq_pm_6.PNG';
+import im8 from '../../assets/abq_pm_2.jpg';
+import im9 from '../../assets/ahmadaljunaid3.jpeg'
+import im10 from '../../assets/hattan5.jpg';
+import im11 from '../../assets/shady3.png';
+import im12 from '../../assets/khaled1.jpg';
+import im13 from '../../assets/hadel1.png';
+import im14 from '../../assets/abq_pm_1.PNG';
+import im15 from '../../assets/sofana6.png';
 
 import image1 from '../../assets/alWaleedLogo.png';
 import image2 from '../../assets/artJameelLogo.png';
 import image3 from '../../assets/miskLogo.png';
-import image4 from '../../assets/naila_logo.png'
+import image4 from '../../assets/naila_logo.png';
+
+import a1 from "../../assets/nugamshi_portrait.png";
+import a2 from "../../assets/halla_portrait.jpg";
+import a3 from "../../assets/basma_portrait.png";
+import a4 from "../../assets/shaker_portrait.png";
+
+import { DiVim } from "react-icons/di";
 
 const artworks = [
   {
@@ -40,44 +60,119 @@ const artworks = [
     initialLikes: 15400,
     initialViews: 25000,
   },
+  {
+    image: im5,
+    title: 'Untitled (2011)',
+    artist: 'Abdullah Qandeel',
+    initialLikes: 18700,
+    initialViews: 21000,
+  },
+  {
+    image: im6,
+    title: 'Kaleidoscope (2024)',
+    artist: 'Fawaz Alotaibi',
+    initialLikes: 10400,
+    initialViews: 15000,
+  },
+  {
+    image: im7,
+    title: 'Apples & Oranges (2022)',
+    artist: 'Abdullah Qandeel',
+    initialLikes: 195000,
+    initialViews: 37000,
+  },
+  {
+    image: im8,
+    title: 'Electrostatic Tree (2020)',
+    artist: 'Abdulah Qandeel',
+    initialLikes: 18700,
+    initialViews: 21000,
+  },
+  {
+    image: im9,
+    title: 'B&W (2022)',
+    artist: 'Ahmad Aljunaid',
+    initialLikes: 25700,
+    initialViews: 50000,
+  },
+  {
+    image: im10,
+    title: 'Pyramids IX (2024)',
+    artist: 'Hattan Rayes',
+    initialLikes: 19500,
+    initialViews: 37000,
+  },
+  {
+    image: im11,
+    title: 'Paris (2024)',
+    artist: 'Shady Sirajuddin',
+    initialLikes: 17400,
+    initialViews: 30000,
+  },
+  {
+    image: im12,
+    title: 'Contemplate (2023)',
+    artist: 'Khalid Aharbi',
+    initialLikes: 18700,
+    initialViews: 21000,
+  },
+  {
+    image: im13,
+    title: 'SEVA (2024)',
+    artist: 'Hadel Alsaleh',
+    initialLikes: 19500,
+    initialViews: 37000,
+  },
+  {
+    image: im14,
+    title: 'Key to Serenity (2019)',
+    artist: 'Abdullah Qandeel',
+    initialLikes: 18700,
+    initialViews: 21000,
+  },
+  {
+    image: im15,
+    title: 'Eurostar (2024)',
+    artist: 'Sofana Dahlan',
+    initialLikes: 25700,
+    initialViews: 50000,
+  },
 ];
 
-const patrons = [
+const artists = [
   {
-    name: 'Public Investment Fund',
-    image: image1, // replace with actual image path
+    name: 'Nugamshi',
+    image: a1, // replace with actual image path
   },
   {
-    name: 'Misk Foundation',
-    image: image3, // replace with actual image path
+    name: 'Halla bint Khalid',
+    image: a2, // replace with actual image path
   },
   {
-    name: 'Ithra (King Abdulaziz Center for World Culture)',
-    image: image2, // replace with actual image path
+    name: 'Basma Felemban',
+    image: a3, // replace with actual image path
   },
   {
-    name: 'Heritage Commission (Ministry of Culture)',
-    image: image4, // replace with actual image path
+    name: 'Shaker Kashgari',
+    image: a4, // replace with actual image path
   },
-  {
-    name: 'Saudi Art Council',
-    image: image3, // replace with actual image path
-  },
+
 ];
+
 
 const MarketProfile = () => {
   const [selectedCategory, setSelectedCategory] = useState("TOP WORKSHOP");
 
-const Categories=["PRIMARY MARKET","SECONDARY MARKET","NFTs", "PRINTS & SOUVENIRS"];
+  const Categories = ["PRIMARY MARKET", "SECONDARY MARKET", "NFTs","PRINTS & SOUVENIRS"];
 
   return (
-    <div className=" border-t border-black container mx-auto p-4 bg-white"> {/* White background for container */}
+    <div className=" container mx-auto p-4 bg-white">
       {/* Categories */}
-      <div className="flex space-x-6 justify-start mb-2">
+      <div className=" border-b  border-black flex space-x-6 justify-start mb-2">
         {Categories.map((category) => (
           <button
             key={category}
-            className={`py-2 px-4 font-bold border-b-4 ${
+            className={`py-2 px-4 font-montserrat-regular border-b-4 ${
               selectedCategory === category
                 ? "border-blue-900 text-blue-900"
                 : "border-transparent text-gray-500"
@@ -90,67 +185,20 @@ const Categories=["PRIMARY MARKET","SECONDARY MARKET","NFTs", "PRINTS & SOUVENIR
       </div>
 
       {/* Cards */}
-      <div className="flex space-x-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
         {artworks.map((art, index) => (
-          <MarketCardLanding key={index} {...art} />
+          <MarketCardMain key={index} {...art} />
         ))}
       </div>
 
-      <div className="bg-white py-8">
-      {/* Heading */}
-      <div className="container mx-auto ">
-        <h2 className="text-lg font-semibold text-yankees-blue uppercase mb-4">Projects</h2>
-        {/* Horizontal Line */}
-        <hr className="border-t border-black mb-6" />
-      </div>
-
-      {/* Project Cards */}
-      <div className="container mx-auto flex justify-center space-x-8">
-        {patrons.map((patron, index) => (
-          <div key={index} className="text-center">
-            <img
-              src={patron.image}
-              alt={patron.name}
-              className="h-16 w-auto object-contain mx-auto mb-2"
-            />
-            <p className="text-yankees-blue text-sm font-semibold">{patron.name}</p>
-            <p className="text-yankees-blue text-xs font-semibold">{patron.name}</p>
-          </div>
-        ))}
-      </div>
-      <div className="text-center mt-8">
-        <button className="px-32 py-2 text-white bg-palatinate-purple rounded hover:bg-fuchsia-800 font-montserrat-light">
-          Discover More
-        </button>
+      <div className="bg-gray-200 mt-auto">
+        <MarketCategory />
       </div>
 
       <footer className="bg-white py-8">
-      {/* Heading */}
-      <div className="container mx-auto ">
-        <h2 className="text-lg font-semibold text-yankees-blue uppercase mb-4">VIEW SIMILAR ARTIST</h2>
-        {/* Horizontal Line */}
-        <hr className="border-t border-black mb-6" />
-      </div>
-
-      {/* Artists Cards */}
-      <div className="container mx-auto flex justify-center space-x-8">
-        {patrons.map((patron, index) => (
-          <div key={index} className="text-center">
-            <img
-              src={patron.image}
-              alt={patron.name}
-              className="h-16 w-auto object-contain mx-auto mb-2"
-            />
-            <p className="text-yankees-blue text-sm font-semibold">{patron.name}</p>
-          
-          </div>
-        ))}
-      </div>
-
-    </footer>
-    
-      </div>
-      </div>
+        <SnapShot />
+      </footer>
+    </div>
   );
 };
 

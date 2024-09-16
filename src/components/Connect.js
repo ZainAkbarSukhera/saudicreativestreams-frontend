@@ -2,25 +2,25 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ConnectCard from './ArtConnectCard/ConnectCardLanding';  
 
-import fPortrait from '../assets/fatimaPortrait.png';
-import f1 from '../assets/fatima1.png';
-import f2 from '../assets/fatima2.png';
-import f3 from '../assets/fatima3.png';
+import fPortrait from '../assets/abdulaziz_profile.png';
+import f1 from '../assets/abdulaziz_1.png';
+import f2 from '../assets/abdulaziz_2.png';
+import f3 from '../assets/abdulaziz_3.png';
 
-import oPortrait from '../assets/omarPortrait.png';
-import o1 from '../assets/omar1.png';
-import o2 from '../assets/omar2.png';
-import o3 from '../assets/omar3.png';
+import oPortrait from '../assets/sofana_profile.png';
+import o1 from '../assets/sofana1.jpeg';
+import o2 from '../assets/sofana7.png';
+import o3 from '../assets/sofana6.png';
 
-import yPortrait from '../assets/yousafPortrait.png';
-import y1 from '../assets/yousaf1.png';
-import y2 from '../assets/yousaf2.png';
-import y3 from '../assets/yousaf3.png';
+import yPortrait from '../assets/hadel_profile.png';
+import y1 from '../assets/hadel1.png';
+import y2 from '../assets/hadel2.png';
+import y3 from '../assets/hadel3.png';
 
-import lPortrait from '../assets/lailaPortrait.png';
-import l1 from '../assets/laila1.png';
-import l2 from '../assets/laila2.png';
-import l3 from '../assets/laila3.png';
+import lPortrait from '../assets/shady_profile1.jpeg';
+import l1 from '../assets/shady2.png';
+import l2 from '../assets/shady1.png';
+import l3 from '../assets/shady3.png';
 
 const Connect = () => {
   const navigate=useNavigate();
@@ -28,38 +28,38 @@ const Connect = () => {
     {
       profileImage: fPortrait,
       topImages: [f1, f2, f3],
-      name: 'Fatima Al-Zahrani',
-      location: 'Riyadh, Saudi Arabia',
-      profession: 'Graphic Designer',
-      initialLikes: 22000,
-      initialViews: 45000,
+      name: 'Abdulaziz Albassam',
+      location: 'Khobar, Saudi Arabia',
+      profession: 'TYPOGRAPHIC DESIGNER',
+      initialLikes: 500000,
+      initialViews: 750000,
     },
     {
       profileImage: oPortrait,
       topImages: [o1, o2, o3],
-      name: 'Omar Al-Harbi',
-      location: 'Jeddah, Saudi Arabia',
-      profession: 'Digital Artist',
-      initialLikes: 18000,
-      initialViews: 36000,
+      name: 'Sofana Dahlan',
+      location: 'Makkah, Saudi Arabia',
+      profession: 'DIGITAL ARTIST',
+      initialLikes: 450000,
+      initialViews: 650000,
     },
     {
       profileImage: yPortrait,
       topImages: [y1, y2, y3],
-      name: 'Yousef Al-Qahtani',
-      location: 'Makkah, Saudi Arabia',
-      profession: 'Photographer',
-      initialLikes: 15000,
-      initialViews: 30000,
+      name: 'Hadel Al-Saleh',
+      location: 'Riyadh, Saudi Arabia',
+      profession: 'GRAPHIC DESIGNER',
+      initialLikes: 350000,
+      initialViews: 500000,
     },
     {
       profileImage: lPortrait,
       topImages: [l1, l2, l3],
-      name: 'Laila Al-Saadi',
-      location: 'Dammam, Saudi Arabia',
-      profession: 'Photographer',
-      initialLikes: 12000,
-      initialViews: 24000,
+      name: 'Shady Sirajuddin',
+      location: 'Riyadh, Saudi Arabia',
+      profession: 'COLLAGE ARTIST',
+      initialLikes: 275000,
+      initialViews: 475000,
     },
   ];
 

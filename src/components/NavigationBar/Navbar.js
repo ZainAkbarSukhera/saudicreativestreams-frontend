@@ -41,7 +41,7 @@ const Navbar = () => {
               smooth={true} 
               offset={-100} 
               duration={500}
-              className='cursor-pointer text-yankees-blue hover:text-gray-900 font-montserrat-regular'>
+              className='cursor-pointer text-yankees-blue hover:text-gray-900 font-montserrat-light'>
               {link}
             </Link>
           ))}

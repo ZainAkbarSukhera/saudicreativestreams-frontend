@@ -68,7 +68,7 @@ const ArtMarket = () => {
         <main className="flex-grow p-8">
           {/* Search bar, toggle, and dropdown */}
           <div className="mb-4">
-            <SearchBar />
+            <SearchBar  placeholderValue={"Search ArtWorks...."}/>
           </div>
           <div className="flex justify-between items-center mb-4">
             <CardViewToggle />
@@ -81,16 +81,12 @@ const ArtMarket = () => {
           </div>
   
           {/* Cards Section (BidCardMain components start here, below FilteredCards) */}
-          <div className="grid grid-cols-4 gap-2 mt-8"> {/* Added margin-top for extra spacing */}
-            {/* {projects.map((project, index) => (
-              <BidCardMain key={index} project={project} />
-            ))} */}
-          </div>
+          <MarketProfile />
 
           {/* Footer */}
-          <footer className="bg-gray-200 mt-auto">
+          {/* <footer className="bg-gray-200 mt-auto">
             <BidFooter />
-          </footer>
+          </footer> */}
         </main>
       </div>
     </div>

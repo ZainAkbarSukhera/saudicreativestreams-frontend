@@ -86,11 +86,11 @@ const Footer = () => {
             <div>
               <h2 className="text-xl font-bold mb-2 font-montserrat-light">Quick Links</h2>
               <ul className="space-y-2">
-                <li><a href="#about" className="hover:text-gray-300 font-montserrat-light">About Us</a></li>
-                <li><a href="#creatives" className="hover:text-gray-300 font-montserrat-light">Creatives</a></li>
-                <li><a href="#projects" className="hover:text-gray-300 font-montserrat-light">Projects</a></li>
-                <li><a href="#marketplace" className="hover:text-gray-300 font-montserrat-light">Marketplace</a></li>
-                <li><a href="#workshops" className="hover:text-gray-300 font-montserrat-light">Workshops</a></li>
+                <li><a href="/" className="hover:text-gray-300 font-montserrat-light">About Us</a></li>
+                <li><a href="/art-connect" className="hover:text-gray-300 font-montserrat-light">Creatives</a></li>
+                <li><a href="/art-bid" className="hover:text-gray-300 font-montserrat-light">Projects</a></li>
+                <li><a href="/art-market" className="hover:text-gray-300 font-montserrat-light">Marketplace</a></li>
+                <li><a href="/art-learn" className="hover:text-gray-300 font-montserrat-light">Workshops</a></li>
                 <li><a href="#patrons" className="hover:text-gray-300 font-montserrat-light">Patrons</a></li>
                 <li><a href="#impact" className="hover:text-gray-300 font-montserrat-light">Creative Impact</a></li>
               </ul>

@@ -4,7 +4,6 @@ import CreatorProfile from "../components/CreativeProfile/profileCreator";
 import Navbar from "../components/NavigationBar/Navbar";
 import SideProfileCreator from "../components/CreativeProfile/SideProfileCreator";
 import HeaderCreativeProfile from "../components/CreativeProfile/headerCreativeProfile";
-import BidProfileFooter from "../components/BidderProfile/BidProfileFooter";
 
 import image1 from "../assets/abqandeelprofile.jpg";
 

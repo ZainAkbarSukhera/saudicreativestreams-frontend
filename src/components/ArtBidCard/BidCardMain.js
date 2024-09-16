@@ -10,7 +10,7 @@ const BidCard = ({project}) => {
     onClick={handleOnClick}
    >
       <div>
-        <img src={project.image} alt={project.title} className="w-full h-64 object-cover mb-2 rounded" />
+        <img src={project.image} alt={project.title} className="w-full h-64 object-fill mb-2 rounded" />
         <h3 className="text-xl font-montserrat-regular mb-4 text-yankees-blue">{project.title}</h3>
 
         <div className="flex items-start">

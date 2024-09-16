@@ -43,8 +43,8 @@ const ConnectCard = ({ profileImage, topImages, name, location, profession, init
       <div className="flex justify-between items-center mt-2 text-gray-700">
         <div className="flex items-center space-x-2">
           {/* Placeholder for badges */}
-          <span className="bg-gray-200 text-sm px-2 py-1 rounded-full">Badge 1</span>
-          <span className="bg-gray-200 text-sm px-2 py-1 rounded-full">Badge 2</span>
+          <span className="bg-gray-200 text-sm px-2 py-1 rounded-full"></span>
+          <span className="bg-gray-200 text-sm px-2 py-1 rounded-full"></span>
         </div>
         <div className="flex items-center space-x-4">
           <button

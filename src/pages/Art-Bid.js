@@ -12,6 +12,10 @@ import image1 from '../assets/Aramco.png';
 import image2 from '../assets/Neom.jpg';
 import image3 from '../assets/Riyadh Expo 2030.png';
 import image4 from '../assets/STC.jpg';
+import image5 from '../assets/World Cup 2034.jpg';
+import image6 from '../assets/alWaleedLogo.png';
+import image7 from '../assets/redseagloballogo.JPG';
+import image8 from '../assets/alulalogo.png';
 import BidFooter from '../components/BidPageFooter/BidFooter';
 
 
@@ -55,45 +59,38 @@ const ArtBid = () => {
       eligibility: 'Open to digital artists globally, with a focus on technological themes',
       prize:'SAR 100,000 cash prize and featured in a digital exhibition hosted by STC',
     },
-    {image: image1,
-      title: 'Calligraphy Initiative',
-      hostedBy:'Saudi Aramco',
-      deadline: 'November 15, 2024',
-      eligibility: 'Open to Saudi digital artists, filmmakers, and animators',
-      prize:'SAR 75,000 cash prize and featured in exhibitions in Aramco’s cultural centers',
+    {image: image5,
+      title: 'Calligraphy & Heritage Initiative',
+      hostedBy:'Saudi Arabian Football Federation (SAFF)',
+      deadline: 'March 1 ,2025',
+      eligibility: 'Open to artists, designers, and creatives worldwide with a passion for sports and art',
+      prize:'SAR 100,000 commission for selected projects and artworks will be displayed in FIFA 2034 venues across Saudi Arabia',
     },
     {
-      image: image1,
-      title: 'Calligraphy Initiative',
-      hostedBy:'Saudi Aramco',
-      deadline: 'November 15, 2024',
-      eligibility: 'Open to Saudi digital artists, filmmakers, and animators',
-      prize:'SAR 75,000 cash prize and featured in exhibitions in Aramco’s cultural centers',
+      image: image6,
+      title: 'Sculptural Art Program',
+      hostedBy:'Alwaleed Philanthrophies',
+      deadline: 'April 30, 2025',
+      eligibility: 'Open to professional sculptors with experience in public art',
+      prize:'SAR 200,000 commission, installation in a prominent public space and media coverage and inclusion in a national art tour',
     },
     {
-      image: image2,
-      title: 'Visual Arts Residency',
-      hostedBy:'Neom',
-      deadline: 'December 15, 2024',
-      eligibility: 'Open to Saudi and international artists aged 18 and above with a strong portfolio in visual arts',
-      prize:'SAR 100,000 grant for project development and exhibition of completed works at a prominent venue in NEOM',
+      image: image7,
+      title: 'Photography Competition',
+      hostedBy:'Red Sea Global',
+      deadline: 'June 19, 2025',
+      eligibility: 'Open to photographers worldwide',
+      prize:'SAR 50,000 cash prize, featured in a traveling exhibition and publication in a Red Sea Global photography book',
     },
     {
-      image: image3,
-      title: 'Future Forward',
-      hostedBy:'Expo 2030',
-      deadline: 'January 15, 2025',
-      eligibility: 'Open to Saudi and international artists across all levels',
-      prize:'Opportunity to exhibit at Expo 2030 in Riyadh and featured in the official Expo 2030 art catalog',
-    },
-    {
-      image: image4,
-      title: 'Digital Art Innovation Challenge',
-      hostedBy: 'Saudi Telecom (STC)',
-      deadline: 'February 25, 2025',
+      image: image8,
+      title: 'Mixed Media Exploration in Al Ula',
+      hostedBy:'Royal Commission of Al Ula',
+      deadline: 'November 17, 2025',
       eligibility: 'Open to digital artists globally, with a focus on technological themes',
-      prize:'SAR 100,000 cash prize and featured in a digital exhibition hosted by STC',
+      prize:'SAR 60,000 grant for materials and production, the artwork will be exhibited in AlUla’s Cultural Center and inclusion in a documentary feature',
     },
+   
   ];
   
   const handleCardClick=()=>{
@@ -116,7 +113,7 @@ const ArtBid = () => {
         <main className="flex-grow p-8">
           {/* Search bar, toggle, and dropdown */}
           <div className="mb-4">
-            <SearchBar />
+            <SearchBar placeholderValue={"Search Projects...."}/>
           </div>
           <div className="flex justify-between items-center mb-4">
             <CardViewToggle />

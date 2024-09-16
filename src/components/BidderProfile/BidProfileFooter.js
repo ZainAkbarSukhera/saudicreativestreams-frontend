@@ -1,10 +1,13 @@
 import React from 'react';
 
-import image1 from '../../assets/alWaleedLogo.png';
-import image2 from '../../assets/artJameelLogo.png';
+import image1 from '../../assets/pifLogo.png';
+import image2 from '../../assets/ithralogo.png';
 import image3 from '../../assets/miskLogo.png';
-import image4 from '../../assets/naila_logo.png'
+import image4 from '../../assets/heritagecomission.png';
+import image5 from '../../assets/saudiartcouncil.png'
 
+
+  
 const BidProfileFooter = () => {
   const projects = [
     {
@@ -25,10 +28,11 @@ const BidProfileFooter = () => {
     },
     {
       name: 'Saudi Art Council',
-      image: image3, // replace with actual image path
+      image: image5, // replace with actual image path
     },
    
   ];
+
 
   return (
     <footer className="bg-white py-8">

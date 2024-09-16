@@ -1,10 +1,12 @@
 import React from 'react';
 
-// Icon placeholders (replace with actual icons if needed)
-const StatusIcon = () => <span>🔄</span>;
-const ProjectTypeIcon = () => <span>📅</span>;
-const EligibilityIcon = () => <span>📄</span>;
-const LocationIcon = () => <span>📍</span>;
+import status_icon from '../../assets/status_icon.png';
+import projecttype_icon from '../../assets/project_icon.png';
+import eligibility_icon from '../../assets/eligibility_icon.png';
+import location_icon from  '../../assets/location_icon.png';
+import prize_icon from '../../assets/prize_icon.png';
+import deadline_icon from '../../assets/deadline_icon.png';
+import hostorganization_icon from '../../assets/hostorganization_icon.png';
 
 const FilterMenu = () => {
   return (
@@ -13,18 +15,18 @@ const FilterMenu = () => {
       {/* Status Section */}
       <div className="mb-6">
         <div className="flex items-center mb-2">
-          <StatusIcon />
-          <h3 className="ml-2 text-yankees-blue font-semibold text-sm">STATUS</h3>
+        <img src={status_icon} alt="status icon" className='w-8' />
+          <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">STATUS</h3>
         </div>
         <div className="ml-6">
           <label className="flex items-center mb-1 text-yankees-blue">
             <input type="radio" name="status" className="mr-1 w-2 h-2 text-black focus:ring-black" />
-            <span className="text-xs text-black">On-going</span>
+            <span className="text-xs text-black font-montserrat-light">On-going</span>
             
           </label>
           <label className="flex items-center text-yankees-blue">
             <input type="radio" name="status" className="mr-1 w-2 h-2  text-black focus:ring-black" />
-            <span className="text-xs text-black">Completed</span>
+            <span className="text-xs text-black font-montserrat-light">Completed</span>
             
           </label>
         </div>
@@ -33,14 +35,14 @@ const FilterMenu = () => {
       {/* Project Type Section */}
       <div className="mb-6">
         <div className="flex items-center mb-2">
-          <ProjectTypeIcon />
-          <h3 className="ml-2 text-yankees-blue font-semibold text-sm">PROJECT TYPE</h3>
+        <img src={projecttype_icon} alt="project type icon" className='w-8' />
+          <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">PROJECT TYPE</h3>
         </div>
         <div className="ml-6">
           {['Art Installation', 'Competition', 'Exhibition', 'Exploration', 'Initiative', 'Program', 'Residency'].map((type) => (
             <label key={type} className="flex items-center mb-1 text-yankees-blue">
               <input type="radio" name="projectType" className="mr-1 w-2 h-2  text-black focus:ring-black" />
-              <span className="text-xs text-black">{type}</span>
+              <span className="text-xs text-black font-montserrat-light">{type}</span>
             </label>
           ))}
         </div>
@@ -49,8 +51,8 @@ const FilterMenu = () => {
       {/* Eligibility Section */}
       <div className="mb-6">
         <div className="flex items-center mb-2">
-          <EligibilityIcon />
-          <h3 className="ml-2 text-yankees-blue font-semibold text-sm">ELIGIBILITY</h3>
+        <img src={eligibility_icon} alt="eligibility icon" className='w-8' />
+          <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">ELIGIBILITY</h3>
         </div>
         <div className="ml-6">
           {[
@@ -64,7 +66,7 @@ const FilterMenu = () => {
           ].map((eligibility) => (
             <label key={eligibility} className="flex items-center mb-1 text-yankees-blue">
               <input type="radio" name="eligibility" className="mr-1 w-2 h-2  text-black focus:ring-black" />
-              <span className="text-xs text-black">{eligibility}</span>
+              <span className="text-xs text-black font-montserrat-light">{eligibility}</span>
             </label>
           ))}
         </div>
@@ -73,8 +75,8 @@ const FilterMenu = () => {
       {/* Location Section */}
       <div className='mb-6'>
         <div className="flex items-center mb-2">
-          <LocationIcon />
-          <h3 className="ml-2 text-yankees-blue font-semibold text-sm">LOCATION</h3>
+        <img src={location_icon} alt="location icon" className='w-8' />
+          <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">LOCATION</h3>
         </div>
         <div className="ml-6">
           {[
@@ -93,7 +95,7 @@ const FilterMenu = () => {
           ].map((location) => (
             <label key={location} className="flex items-center mb-1 text-yankees-blue">
               <input type="radio" name="location" className="mr-1 w-2 h-2  text-black focus:ring-black" />
-              <span className="text-xs text-black">{location}</span>
+              <span className="text-xs text-black font-montserrat-light">{location}</span>
             </label>
           ))}
         </div>
@@ -102,8 +104,8 @@ const FilterMenu = () => {
       {/*Prize Section */}
       <div className='mb-6'>
         <div className="flex items-center mb-2">
-          <LocationIcon />
-          <h3 className="ml-2 text-yankees-blue font-semibold text-sm">PRIZE</h3>
+        <img src={prize_icon} alt="prize icon" className='w-8' />
+          <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">PRIZE</h3>
         </div>
         <div className="ml-6">
           {[
@@ -116,7 +118,7 @@ const FilterMenu = () => {
           ].map((location) => (
             <label key={location} className="flex items-center mb-1 text-yankees-blue">
               <input type="radio" name="location" className="mr-1 w-2 h-2  text-black focus:ring-black" />
-              <span className="text-xs text-black">{location}</span>
+              <span className="text-xs text-black font-montserrat-light">{location}</span>
             </label>
           ))}
         </div>
@@ -125,8 +127,8 @@ const FilterMenu = () => {
       {/*Deadline Section */}
       <div className='mb-6'>
         <div className="flex items-center mb-2">
-          <LocationIcon />
-          <h3 className="ml-2 text-yankees-blue font-semibold text-sm">DEADLINE</h3>
+        <img src={deadline_icon} alt="deadline icon" className='w-8' />
+          <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">DEADLINE</h3>
         </div>
         <div className="ml-6">
           {[
@@ -138,7 +140,7 @@ const FilterMenu = () => {
           ].map((location) => (
             <label key={location} className="flex items-center mb-1 text-yankees-blue">
               <input type="radio" name="location" className="mr-1 w-2 h-2  text-black focus:ring-black" />
-              <span className="text-xs text-black">{location}</span>
+              <span className="text-xs text-black font-montserrat-light">{location}</span>
             </label>
           ))}
         </div>
@@ -148,8 +150,8 @@ const FilterMenu = () => {
       {/*Host-Organization Section */}
       <div className='mb-6'>
               <div className="flex items-center mb-2">
-                <LocationIcon />
-                <h3 className="ml-2 text-yankees-blue font-semibold text-sm">HOST-ORGANIZATION</h3>
+              <img src={hostorganization_icon} alt="host organization icon" className='w-8' />
+                <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">HOST-ORGANIZATION</h3>
               </div>
               <div className="ml-6">
                 {[
@@ -163,7 +165,7 @@ const FilterMenu = () => {
                 ].map((location) => (
                   <label key={location} className="flex items-center mb-1 text-yankees-blue">
                     <input type="radio" name="location" className="mr-1 w-2 h-2  text-black focus:ring-black" />
-                    <span className="text-xs text-black">{location}</span>
+                    <span className="text-xs text-black font-montserrat-light">{location}</span>
                   </label>
                 ))}
               </div>

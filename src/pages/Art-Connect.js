@@ -9,25 +9,100 @@ import FilteredCards from '../components/DisciplineFilter/FilterCard';
 import Navbar from '../components/NavigationBar/Navbar';
 import ConnectFilterMenu from '../components/SideFilterMenu/ConnectFilterMenu';
 
-import fPortrait from '../assets/fatimaPortrait.png';
-import f1 from '../assets/fatima1.png';
-import f2 from '../assets/fatima2.png';
-import f3 from '../assets/fatima3.png';
+import AbdulazizPortrait from '../assets/abdulaziz_profile.png';
+import Abdulaziz1 from '../assets/abdulaziz_1.png';
+import Abdulaziz2 from '../assets/abdulaziz_2.png';
+import Abdulaziz3 from '../assets/abdulaziz_3.png';
 
-import oPortrait from '../assets/omarPortrait.png';
-import o1 from '../assets/omar1.png';
-import o2 from '../assets/omar2.png';
-import o3 from '../assets/omar3.png';
+import AbqPortrait from '../assets/abqandeelprofile.jpg';
+import abq1 from '../assets/abq3.png';
+import abq2 from '../assets/abq4.png';
+import abq3 from '../assets/abq5.png';
 
-import yPortrait from '../assets/yousafPortrait.png';
-import y1 from '../assets/yousaf1.png';
-import y2 from '../assets/yousaf2.png';
-import y3 from '../assets/yousaf3.png';
+import SofanaPortrait from '../assets/sofana_profile.png';
+import sofana1 from '../assets/sofana1.jpeg';
+import sofana2 from '../assets/sofana7.png';
+import sofana3 from '../assets/sofana6.png';
 
-import lPortrait from '../assets/lailaPortrait.png';
-import l1 from '../assets/laila1.png';
-import l2 from '../assets/laila2.png';
-import l3 from '../assets/laila3.png';
+import HadelPortrait from '../assets/hadel_profile.png';
+import hadel1 from '../assets/hadel1.png';
+import hadel2 from '../assets/hadel2.png';
+import hadel3 from '../assets/hadel3.png';
+
+import FawazPortrait from '../assets/fawaz_profile.jpeg';
+import fawaz1 from '../assets/fawaz1.jpg';
+import fawaz2 from '../assets/fawaz2.jpg';
+import fawaz3 from '../assets/fawaz3.jpg';
+
+import BaderPortrait from '../assets/bader_profile.jpeg';
+import bader1 from '../assets/bader1.jpg';
+import bader2 from '../assets/bader2.jpeg';
+import  bader3 from '../assets/bader3.jpeg';
+
+import DalyaPortrait from '../assets/dalya_profile.jpeg';
+import dalya1 from '../assets/dalya1.png';
+import dalya2 from '../assets/dalya2.png';
+import dalya3 from '../assets/dalya3.jpeg';
+
+import KhaledPortrait from '../assets/khaled_profile.jpeg';
+import khaled1 from '../assets/khaled1.jpg';
+import khaled2 from '../assets/khaled2.jpg';
+import khaled3 from '../assets/khaled3.jpg';
+
+import ShathaPortrait from '../assets/shatha_profile.jpeg';
+import shatha1 from '../assets/shatha1.png';
+import shatha2 from '../assets/shatha2.jpeg';
+import shatha3 from '../assets/shatha3.png';
+
+import SalamPortrait from '../assets/salam_profile.jpeg';
+import salam1 from '../assets/salam1.png';
+import salam2 from '../assets/salam2.png';
+import salam3 from '../assets/salam3.png';
+
+import RudwanPortrait from '../assets/rudwan_profile.jpeg';
+import rudwan1 from '../assets/rudwan1.png';
+import rudwan2 from '../assets/rudwan2.png';
+import rudwan3 from '../assets/rudwan3.png';
+
+import YazeedPortrait from '../assets/yazeed_profile.jpeg';
+import yazeed1 from '../assets/yazeed1.jpg';
+import yazeed2 from '../assets/yazeed2.png';
+import yazeed3 from '../assets/yazeed3.png';
+
+import MajedPortrait from '../assets/majed_profile.jpeg';
+import majed1 from '../assets/majed1.jpeg';
+import majed2 from '../assets/majed2.png';
+import majed3 from '../assets/majed3.jpg';
+
+import OmeralabdaliPortrait from '../assets/omarabdali_profile.jpeg';
+import omeralabdali1 from '../assets/omarabdali1.jpg';
+import omeralabdali2 from '../assets/omarabdali2.jpg';
+import omeralabdali3 from '../assets/omarabdali3.jpg';
+
+import HattanPortrait from '../assets/hattan_profile.jpeg';
+import hattan1 from '../assets/hattan1.jpg';
+import hattan2 from '../assets/hattan2.jpg';
+import hattan3 from '../assets/hattan3.png';
+
+import AlkadhiPortrait from '../assets/omaralkadhi_profile.jpeg';
+import alkadhi1 from '../assets/omaralkadhi1.jpg';
+import alkadhi2 from '../assets/omaralkadhi2.jpg';
+import alkadhi3 from '../assets/omaralkadhi3.jpg';
+
+import AljunaidPortrait from '../assets/ahmadaljunaid_profile.jpeg';
+import aljunaid1 from '../assets/ahmadaljunaid1.jpg';
+import aljunaid2 from '../assets/ahmadaljunaid2.jpg';
+import Aljunaid3 from '../assets/ahmadaljunaid3.jpeg';
+
+import ZiadPortrait from '../assets/ziad_profile.jpeg';
+import ziad1 from '../assets/ziad1.jpg';
+import ziad2 from '../assets/ziad2.png';
+import ziad3 from '../assets/ziad3.png';
+
+import AlharbiPortrait from '../assets/alharbi_profile.jpeg';
+import alharbi1 from '../assets/alharbi1.jpg';
+import alharbi2 from '../assets/alharbi2.jpeg';
+import alharbi3 from '../assets/alharbi3.jpeg';
 
 
 const sortOptions = ['recommended','newest','oldest'];
@@ -39,8 +114,8 @@ const ArtConnect = () => {
 
   const creatives = [
     {
-      profileImage: fPortrait,
-      topImages: [f1, f2, f3],
+      profileImage: AbdulazizPortrait,
+      topImages: [Abdulaziz1,Abdulaziz2,Abdulaziz3],
       name: 'Abdulaziz Albassam',
       location: 'Khobar, Saudi Arabia',
       profession: 'Typographic Designer',
@@ -48,26 +123,17 @@ const ArtConnect = () => {
       initialViews: 750000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [f1, f2, f3],
-      name: 'Abdullah Qandeel',
-      location: 'Jeddah, Saudi Arabia',
-      profession: 'CONTEMPORARY ARTIST',
-      initialLikes: 500000,
-      initialViews: 750000,
-    },
-    {
-      profileImage: oPortrait,
-      topImages: [f1, f2, f3],
+      profileImage: AbqPortrait,
+      topImages: [abq1,abq2,abq3],
       name: 'Abdullah Qandeel',
       location: 'Jeddah, Saudi Arabia',
       profession: 'Contemporary Artist',
-      initialLikes: 500000,
-      initialViews: 750000,
+      initialLikes: 650000,
+      initialViews: 700000,
     },
     {
-      profileImage: oPortrait,
-      topImages: [o1, o2, o3],
+      profileImage: SofanaPortrait,
+      topImages: [sofana1,sofana2,sofana3],
       name: 'Sofana Dahlan',
       location: 'Makkah, Saudi Arabia',
       profession: 'Digital Artist',
@@ -75,8 +141,8 @@ const ArtConnect = () => {
       initialViews: 650000,
     },
     {
-      profileImage: yPortrait,
-      topImages: [y1, y2, y3],
+      profileImage: HadelPortrait,
+      topImages: [hadel1,hadel2,hadel3],
       name: 'Hadel Al-Saleh',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Graphic Designer',
@@ -84,8 +150,8 @@ const ArtConnect = () => {
       initialViews: 500000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: FawazPortrait,
+      topImages: [fawaz1,fawaz2,fawaz3],
       name: 'Fawaz Alotaibi',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Abstract Painter',
@@ -93,8 +159,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: BaderPortrait,
+      topImages: [bader1,bader2,bader3],
       name: 'Bader Halawani',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Portrait Photographer',
@@ -102,8 +168,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: DalyaPortrait,
+      topImages: [dalya1,dalya2,dalya3],
       name: 'Dalya Katoah',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Printmaker',
@@ -111,8 +177,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: KhaledPortrait,
+      topImages: [khaled1,khaled2,khaled3],
       name: 'Khaled Alharbi',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Ceramic Sculptor',
@@ -120,8 +186,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: ShathaPortrait,
+      topImages: [shatha1,shatha2,shatha3],
       name: 'Shatha Abuzinda',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Lettering Artist',
@@ -129,8 +195,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: SalamPortrait,
+      topImages: [salam1,salam2,salam3],
       name: 'Salam Aljishi',
       location: 'Khobar, Saudi Arabia',
       profession: 'Illustrator',
@@ -138,8 +204,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: RudwanPortrait,
+      topImages: [rudwan1,rudwan2,rudwan3],
       name: 'Rudwan Batterjee',
       location: 'Jeddah, Saudi Arabia',
       profession: 'Motion Graphics Designer',
@@ -147,8 +213,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: YazeedPortrait,
+      topImages: [yazeed1,yazeed2,yazeed3],
       name: 'Yazeed Alyahya',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Product Photographer',
@@ -156,8 +222,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: MajedPortrait,
+      topImages: [majed1,majed2,majed3],
       name: 'Majed  Alosailan',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Muralist',
@@ -165,8 +231,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: OmeralabdaliPortrait,
+      topImages: [omeralabdali1,omeralabdali2,omeralabdali3],
       name: 'Omar Alabdali',
       location: 'Jeddah, Saudi Arabia',
       profession: 'Landscape Photographer',
@@ -174,8 +240,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: HattanPortrait,
+      topImages: [hattan1,hattan2,hattan3],
       name: 'Hattan Rayes',
       location: 'Jeddah, Saudi Arabia',
       profession: 'Lithographer',
@@ -183,8 +249,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: AlkadhiPortrait,
+      topImages: [alkadhi1,alkadhi2,alkadhi3],
       name: 'Omar Alkadhi',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Marble Sculptor',
@@ -192,8 +258,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage:AljunaidPortrait,
+      topImages: [aljunaid1,aljunaid2,Aljunaid3],
       name: 'Ahmad Aljunaid',
       location: 'Dhahran, Saudi Arabia',
       profession: 'Calligrapher',
@@ -201,8 +267,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: ZiadPortrait,
+      topImages: [ziad1,ziad2,ziad3],
       name: 'Ziad Alafaliq',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Visual Designert',
@@ -210,8 +276,8 @@ const ArtConnect = () => {
       initialViews: 475000,
     },
     {
-      profileImage: lPortrait,
-      topImages: [l1, l2, l3],
+      profileImage: AlharbiPortrait,
+      topImages: [alharbi1,alharbi2,alharbi3],
       name: 'Mohammad Alharbi',
       location: 'Riyadh, Saudi Arabia',
       profession: 'Multimedia Specialist',
@@ -236,7 +302,7 @@ const ArtConnect = () => {
         <main className="flex-grow p-8">
           {/* Search bar, toggle, and dropdown */}
           <div className="mb-4">
-            <SearchBar />
+            <SearchBar placeholderValue={"Search Creatives...."} />
           </div>
           <div className="flex justify-between items-center mb-4">
             <CardViewToggle />

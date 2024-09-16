@@ -39,7 +39,7 @@ const ConnectCard = ({ profileImage, topImages, name, location, profession, init
       </div>
 
       {/* Name, Location, and Profession */}
-      <h3 className="text-lg font-bold text-center font-montserrat-regular text-yankees-blue">{name}</h3>
+      <h3 className="text-lg  text-center font-montserrat-medium text-yankees-blue">{name}</h3>
       <div className='flex justify-center'>
         <FaLocationArrow className='text-madder-lake text-sm mt-1 mr-2'/>
         <p className="text-madder-lake text-center font-montserrat-light">{location}</p>

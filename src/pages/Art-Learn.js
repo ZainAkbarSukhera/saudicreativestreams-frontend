@@ -105,7 +105,7 @@ const ArtLearn = () => {
         <main className="flex-grow p-8">
           {/* Search bar, toggle, and dropdown */}
           <div className="mb-4">
-            <SearchBar />
+            <SearchBar placeholderValue={"Search Workshops...."} />
           </div>
           <div className="flex justify-between items-center mb-4">
             <CardViewToggle />

@@ -1,6 +1,16 @@
 import React from "react";
 import { MdHexagon } from "react-icons/md";
 
+import badge_icon from "../../assets/badges_icon.png";
+import badges from "../../assets/all_badges.png";
+import skill_icon from "../../assets/skill_icon2.png";
+import experience_icon from "../../assets/experience_icon.png";
+import achievement_icon from "../../assets/achievement_icon.png";
+import digitaltools_icon from "../../assets/digitaltools_icon.png";
+import education_icon from "../../assets/education_icon.png";
+import exhibition_icon from "../../assets/exhibition_icon.png";
+
+
 
 const sideProfileBidder =({imageUrl,profilebio}) => {
   return (
@@ -12,22 +22,24 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
     />
     
     <div className=" flex flex-col lg:col-span-2">
-    <p className=" text-sm font-montserrat-light mb-4 mt-4">{profilebio}</p>
+    <p className=" text-sm font-montserrat-regular mb-4 mt-4">{profilebio}</p>
   <div className="mt-4">
      {/* Badges Section */}
      <div className='mb-6'>
         <div className="flex items-center mb-2">
-          <h3 className="ml-2 text-yankees-blue font-semibold text-sm">BADGES</h3>
+        <img src={badge_icon} alt="badge icon" className='w-8' />
+          <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">BADGES</h3>
         </div>
         <div>
-          <p>*Insert Badges Here*</p>
+          <img src={badges} alt="all badges" className='w-48' />
           </div>
       </div>
 
       {/* skill Section */}
       <div className="mb-6">
       <div className="flex items-center mb-2">
-                <h3 className="ml-2 text-yankees-blue font-semibold text-sm">SKILLS</h3>
+      <img src={skill_icon} alt="skill icon" className='w-8' />
+                <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">SKILLS</h3>
               </div>
         <div className="space-x-2">
           {[
@@ -40,7 +52,7 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
             'Public Art',
             'Installation Art',
           ].map((SkillLevel) => (
-          <span className="border border-black rounded-md text-xs text-black">{SkillLevel}</span>
+          <span className="border border-black rounded-md text-xs font-montserrat-light text-black">{SkillLevel}</span>
           ))}
         </div>
       </div>
@@ -48,7 +60,8 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
       {/* Experience Section */}
       <div className="mb-6">
       <div className="flex items-center mb-2">
-                <h3 className="ml-2 text-yankees-blue font-semibold text-sm">EXPERIENCE</h3>
+      <img src={experience_icon} alt="experience icon" className='w-8' />
+                <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">EXPERIENCE</h3>
               </div>
         <div >
           {[
@@ -56,7 +69,7 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
             'Art Consultant - PIF (2020-2021)', 
             'Creative Art Director - AQ Studios (2010 - Present)',
           ].map((Experience) => (
-          <p className=" text-xs text-black">{Experience}</p>
+          <p className=" text-xs text-black font-montserrat-light">{Experience}</p>
           ))}
         </div>
       </div>
@@ -64,7 +77,8 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
       {/* Exhibitions Section */}
       <div className="mb-6">
       <div className="flex items-center mb-2">
-                <h3 className="ml-2 text-yankees-blue font-semibold text-sm">EXHIBITIONS</h3>
+      <img src={exhibition_icon} alt="exhibition icon" className='w-8' />
+                <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">EXHIBITIONS</h3>
               </div>
         <div >
           {[
@@ -75,7 +89,7 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
             "Group Exhibition: 'Contemporary Voices' – Paris (2017)",
             "Solo Exhibition: 'The Awakening Series' – Riyadh (2016)",
           ].map((Exhibition) => (
-          <p className="text-xs text-black">{Exhibition}</p>
+          <p className="text-xs text-black font-montserrat-light">{Exhibition}</p>
           ))}
         </div>
       </div>
@@ -83,7 +97,8 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
       {/* Achievements Section */}
       <div className="mb-6">
       <div className="flex items-center mb-2">
-                <h3 className="ml-2 text-yankees-blue font-semibold text-sm">ACHIEVEMENTS</h3>
+      <img src={achievement_icon} alt="achievement icon" className='w-8' />
+                <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">ACHIEVEMENTS</h3>
               </div>
         <div >
           {[
@@ -91,7 +106,7 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
             "Sharjah Biennial – United Arab Emirates (2017)",
             "Biennale of Contemporary Art – Florence, Italy (2015)",
           ].map((Achievements) => (
-          <p className=" text-xs text-black">{Achievements}</p>
+          <p className=" text-xs text-black font-montserrat-light">{Achievements}</p>
           ))}
         </div>
       </div>
@@ -99,13 +114,14 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
       {/* Education Section */}
       <div className="mb-6">
       <div className="flex items-center mb-2">
-                <h3 className="ml-2 text-yankees-blue font-semibold text-sm">EDUCATION</h3>
+      <img src={education_icon} alt="education icon" className='w-8' />
+                <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">EDUCATION</h3>
               </div>
         <div >
           {[
             "Bachelor of Arts in Fine Arts – Parsons School of Design, New York, USA",
           ].map((Education) => (
-          <p className=" text-xs text-black">{Education}</p>
+          <p className=" text-xs text-black font-montserrat-light">{Education}</p>
           ))}
         </div>
       </div>
@@ -113,7 +129,8 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
       {/* Digital Tools Section */}
       <div className="mb-6">
       <div className="flex items-center mb-2">
-                <h3 className="ml-2 text-yankees-blue font-semibold text-sm">DIGITAL TOOLS</h3>
+      <img src={digitaltools_icon} alt="digital tools icon" className='w-8' />
+                <h3 className="ml-2 text-yankees-blue font-montserrat-light text-sm">DIGITAL TOOLS</h3>
               </div>
         <div >
           {[
@@ -123,7 +140,7 @@ const sideProfileBidder =({imageUrl,profilebio}) => {
             "Keynote",
             "Canva",
           ].map((DigitalTools) => (
-          <p className=" text-xs text-black">{DigitalTools}</p>
+          <p className=" text-xs text-black font-montserrat-light">{DigitalTools}</p>
           ))}
         </div>
       </div>

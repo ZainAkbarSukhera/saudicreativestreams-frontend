@@ -12,24 +12,24 @@ const sideProfileBidder =({imageUrl,initiativeName,keyDates,eligibilityCriteria}
     />
     
     <div className="flex flex-col lg:col-span-2">
-  <span className="text-sm font-semibold mb-4">Key Dates</span>
+  <span className="text-sm font-montserrat-medium mb-4">Key Dates</span>
   <div className="text-xs space-y-2">
     {keyDates.map((date, index) => (
       <div key={index} className="flex items-start">
         <MdHexagon className="text-red-600 mr-2 flex-shrink-0" />
-        <span className="whitespace-nowrap">{date.label}: {date.value}</span>
+        <span className="whitespace-nowrap font-montserrat-regular">{date.label}: {date.value}</span>
       </div>
     ))}
   </div>
 
 
   <div className="mt-4">
-    <h2 className="text-sm font-semibold mb-4">Eligibility Criteria</h2>
+    <h2 className="text-sm font-montserrat-medium mb-4">Eligibility Criteria</h2>
     <ul className="text-xs space-y-2">
       {eligibilityCriteria.map((criteria, index) => (
         <li key={index} className="flex items-center">
           <MdHexagon className="text-red-600 mr-2 mb-6 flex-shrink-0" />
-          <span>{criteria}</span>
+          <span className="font-montserrat-regular">{criteria}</span>
         </li>
       ))}
     </ul>
